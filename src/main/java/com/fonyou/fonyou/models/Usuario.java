@@ -14,30 +14,30 @@ import javax.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     @Getter
     @Setter
+    @Column(name = "id")
     private Long id;
 
+    @Getter
+    @Setter
     @Column(name = "nombre")
+    private String nombre;
+
     @Getter
     @Setter
-    private String sNombre;
+    @Column(name = "apellidos")
+    private String apellidos;
 
-    @Column(name = "apellido")
     @Getter
     @Setter
-    private String sApellidos;
-
     @Column(name = "email")
-    @Getter
-    @Setter
-    private String sEmail;
+    private String email;
 
-    @Column(name = "password")
     @Getter
     @Setter
-    private String sPassword;
+    @Column(name = "password")
+    private String password;
 
 
 }

@@ -4,7 +4,6 @@ $(document).ready(function() {
 });
 
  async function registrarUsuario(){
- alert(document.getElementById("txtApellidos").value);
  let dato={};
  dato.nombre=document.getElementById("txtNombre").value;
  dato.apellidos=document.getElementById("txtApellidos").value;
@@ -23,9 +22,9 @@ $(document).ready(function() {
      'Accept': 'application/json',
      'Content-Type': 'application/json'
    },
-   body: JSON.stringify(datos)
- });
+   body: JSON.stringify(dato)
+
+ })();
  alert("La cuenta fue creada con exito!");
  window.location.href = 'login.html'
-
 }
